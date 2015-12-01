@@ -2,7 +2,7 @@ var app = angular.module('admin',['ng-admin']);
 
 app.config(['RestangularProvider', function (RestangularProvider) {
 
-        // use the custom query parameters function to format the API request correctly
+        /* use the custom query parameters function to format the API request correctly */
         RestangularProvider.addFullRequestInterceptor(function(element, operation, what, url, headers, params) {
             if (operation === 'getList') {
                 // custom pagination params
